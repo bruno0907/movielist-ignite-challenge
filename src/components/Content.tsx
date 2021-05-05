@@ -1,6 +1,8 @@
 import { Header } from '../components/Header'
 import { MovieList } from './MovieList';
 
+import '../styles/content.scss';
+
 interface MovieProps {
   movies: Array<{
     imdbID: string;
