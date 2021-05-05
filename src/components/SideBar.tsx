@@ -1,19 +1,6 @@
-import { useState } from 'react';
-
 import { Button } from '../components/Button';
 
 import '../styles/sidebar.scss';
-
-interface MovieProps {
-  imdbID: string;
-  Title: string;
-  Poster: string;
-  Ratings: Array<{
-    Source: string;
-    Value: string;
-  }>;
-  Runtime: string;
-}
 
 interface GenreResponseProps {
   genres: Array<{
@@ -22,14 +9,13 @@ interface GenreResponseProps {
     title: string;
   }>;
   handleClickButton: (id: number) => void;
+  selectedGenreId: number;
 }
 
-export function SideBar({ genres, handleClickButton }: GenreResponseProps) {
-  const [selectedGenreId, setSelectedGenreId] = useState(1);
-
+export function SideBar({ genres, selectedGenreId, handleClickButton }: GenreResponseProps) {
   return(
     <nav className="sidebar">
-      <span>Watch<p>Me</p></span>
+      <p>Watch<span>Me</span></p>
 
       <div className="buttons-container">
         {genres.map(genre => (

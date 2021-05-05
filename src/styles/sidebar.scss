@@ -11,13 +11,13 @@ nav.sidebar {
 
   background: var(--background2);
 
-  > span {
+  > p {
     margin-bottom: 4.5rem;
     font-size: 3rem;
     font-weight: 600;
     color: var(--yellow);
 
-    p {
+    span {
       display: inline;
       color: var(--white);
     }

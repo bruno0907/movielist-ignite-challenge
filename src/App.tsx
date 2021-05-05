@@ -28,7 +28,7 @@ interface MovieProps {
 }
 
 export function App() {
-  const [selectedGenreId, setSelectedGenreId] = useState(1);
+  const [selectedGenreId, setSelectedGenreId] = useState(1);  
 
   const [genres, setGenres] = useState<GenreResponseProps[]>([]);
 
@@ -57,7 +57,7 @@ export function App() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
-      <SideBar genres={genres} handleClickButton={handleClickButton} />
+      <SideBar genres={genres} selectedGenreId={selectedGenreId} handleClickButton={handleClickButton} />
       <Content selectedGenre={selectedGenre} movies={movies}/>
     </div>
   )
