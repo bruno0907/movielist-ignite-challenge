@@ -1,7 +1,8 @@
+import { ButtonHTMLAttributes, memo } from 'react';
+
 import { Icon } from './Icon';
 
 import '../styles/button.scss';
-import { ButtonHTMLAttributes, memo } from 'react';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
